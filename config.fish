@@ -9,7 +9,7 @@ if not test -L /usr/local/bin/firefox
     set firefox_bin (which mercury-browser)
 
     if test -n "$firefox_bin"
-        sudo ln -s $firefox_bin /usr/local/bin/firefox
+        sudo ln -sf $firefox_bin /usr/local/bin/firefox
         echo "Symlink created: Mercury Browser is now the default browser."
     else
         echo "Mercury Browser binary not found. Please install it or adjust the path in the script."
