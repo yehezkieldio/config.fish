@@ -4,15 +4,15 @@ set fish_greeting
 # Set default editor to VS Code Insiders
 set -u EDITOR vscode-insiders
 
-# Symlink Firefox Developer Edition to /usr/local/bin/firefox
+# Symlink Mercury Browser to /usr/local/bin/firefox
 if not test -L /usr/local/bin/firefox
-    set firefox_bin (which firefox-developer-edition)
+    set firefox_bin (which mercury-browser)
 
     if test -n "$firefox_bin"
         sudo ln -s $firefox_bin /usr/local/bin/firefox
-        echo "Symlink created: Firefox Developer Edition is now the default browser."
+        echo "Symlink created: Mercury Browser is now the default browser."
     else
-        echo "Firefox Developer Edition binary not found. Please install it or adjust the path in the script."
+        echo "Mercury Browser binary not found. Please install it or adjust the path in the script."
     end
 end
 
